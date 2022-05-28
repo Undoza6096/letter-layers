@@ -67,7 +67,7 @@ class ReStackLayer
                 level => new Decimal(1e50),
                 level => new Decimal(1).add(Decimal.pow(1000, level).sub(1).mul(this.timeSpent)),{
                         maxLevel: 10000,
-                        getEffectDisplay: effectDisplayTemplates.numberStandard(2, "^")
+                        getEffectDisplay: effectDisplayTemplates.numberStandard(1000, "^")
                     })
             ],
             [
