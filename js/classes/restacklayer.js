@@ -138,8 +138,8 @@ class ReStackLayer
                     }),
                 new RestackLayerUpgrade("Template",
                     level => new Decimal("1ee308"),
-                    level => new Decimal(1).add(level.mul(0.15)), {
-                        maxLevel: 1,
+                    level => new Decimal(1).add(level.mul(3)), {
+                        maxLevel: 250,
                         getEffectDisplay: effectDisplayTemplates.numberStandard(2, "^")
                     }),
             ],
