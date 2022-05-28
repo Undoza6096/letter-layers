@@ -13,14 +13,14 @@ class ReStackLayer
                 }),
             layerExponentialBoostFactorTime: new RestackLayerUpgrade("The Layer Exponential Factor increases over time",
                 level => this.getPermUpgradeCost(),
-                level => Math.min(1, this.timeSpent / 28800) * 3 * level.toNumber(), {
+                level => Math.min(1, this.timeSpent / 2800) * 100 * level.toNumber(), {
                     maxLevel: 2,
                     getEffectDisplay: effectDisplayTemplates.numberStandard(4, "+")
                 }),
             upgradeEffects: new RestackLayerUpgrade("All Upgrade Effects are stronger (including Tree Upgrades)",
                 level => this.getPermUpgradeCost(),
                 level => new Decimal(1).add(level.mul(2)), {
-                    maxLevel: 2,
+                    maxLevel: 1000,
                     getEffectDisplay: effectDisplayTemplates.numberStandard(2, "^")
                 }),
             powerGenerators: new RestackLayerUpgrade("All Power Generators are stronger",
