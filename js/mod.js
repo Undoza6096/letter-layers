@@ -15,9 +15,9 @@ var mod = {
     layerNames: [
         ["Ω-Lλγers",
         [
-            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-            "abcdefghijklmnopqrstuvwxyz",
-            ["<span class='flipped-v'>A</span>", "<span class='flipped-v'>😞</span>","<span class='flipped-v'>👏</span>","<span class='flipped-v'>⚠</span>"]
+            "1234567890?!?()£₪#£^¤[]%£|£",
+            "¡¿?!^£€$><₪",
+            ["INFISTAGE", "OMEGASTAGE","EXPANTASTAGE","OMEGAEXPANTA"]
         ]],
         ["Alphabet",
         [
