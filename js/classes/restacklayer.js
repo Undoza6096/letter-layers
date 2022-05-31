@@ -13,7 +13,7 @@ class ReStackLayer
                 }),
             layerExponentialBoostFactorTime: new RestackLayerUpgrade("The Layer Exponential Factor increases over time",
                 level => this.getPermUpgradeCost(),
-                level => Math.min(1, this.timeSpent / 2800) * 100 * level.toNumber(), {
+                level => Math.min(1, this.timeSpent / 2800) * 100000 * level.toNumber(), {
                     maxLevel: 2,
                     getEffectDisplay: effectDisplayTemplates.numberStandard(4, "+")
                 }),
@@ -43,8 +43,8 @@ class ReStackLayer
                 })
         };
         this.metaUpgrade = new RestackLayerUpgrade("All your Layer Resources are multiplied each second",
-            level => new Decimal(1e10).pow(level.add("1").mul(level.add("1"))),
-            level => 1 + 0.3 * level.toNumber(),{
+            level => new Decimal(1e10).pow(level.add("10").mul(level.add("10"))),
+            level => 1 + 10 * level.toNumber(),{
                 maxLevel: 5,
             });
         this.upgradeTree = [
@@ -59,8 +59,8 @@ class ReStackLayer
             [
                 new RestackLayerUpgrade("Resource Multipliers are stronger",
                     level => new Decimal(1e50),
-                    level => Decimal.pow(4, level),{
-                        maxLevel: 1,
+                    level => Decimal.pow(100, level),{
+                        maxLevel: 100,
                         getEffectDisplay: effectDisplayTemplates.numberStandard(2, "^")
                     }),
                 new RestackLayerUpgrade("Resource Multiplier Upgrades are stronger based on time spent this ReStack",
@@ -121,7 +121,7 @@ class ReStackLayer
             ],
             [
                 new RestackLayerUpgrade("Time since ReStack no longer resets",
-                    level => new Decimal("1ee100"),
+                    level => new Decimal("1ee80"),
                     level => level.gt(0), {
                         maxLevel: 1,
                         getEffectDisplay: function()
