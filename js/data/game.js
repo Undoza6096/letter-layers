@@ -90,7 +90,7 @@ const game = {
             }),
     },
     achievements: [
-new Achievement("sus", "start the game", "?", () => (game.layers[0] && game.layers[0].resource.gt(1)) || game.metaLayer.active),
+        new Achievement("sus", "start the game", "?", () => (game.layers[0] && game.layers[0].resource.gt(1)) || game.metaLayer.active),
         new Achievement("10", "buy  this generator", "10", () => (game.layers[0] && game.layers[0].resource.gt(10)) || game.metaLayer.active),
         new Achievement("100", "you have this?", "hundred", () => (game.layers[0] && game.layers[0].resource.gt(100)) || game.metaLayer.active),
         new Achievement("thousand", "have times", "1K", () => (game.layers[0] && game.layers[0].resource.gt(1e3)) || game.metaLayer.active),
